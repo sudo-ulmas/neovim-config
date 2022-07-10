@@ -55,7 +55,13 @@ bufferline.setup {
     --     return true
     --   end
     -- end,
-    offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+    offsets = { { filetype = "NvimTree",
+    text = 'File Explorer',
+    highlight = 'Directory',
+    padding = 1,
+    text_align = 'left',
+    }
+    },
     show_buffer_icons = true,
     show_buffer_close_icons = true,
     show_close_icon = true,
@@ -71,14 +77,14 @@ bufferline.setup {
     --   return buffer_a.modified > buffer_b.modified
     -- end
   },
-  highlights = {
+  --[[ highlights = {
     fill = {
       guifg = { attribute = "fg", highlight = "#ff0000" },
       guibg = { attribute = "bg", highlight = "TabLine" },
     },
     background = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "#ff0000" },
+      guibg = { attribute = "bg", highlight = "#ff0000" },
     },
 
     -- buffer_selected = {
@@ -87,8 +93,8 @@ bufferline.setup {
     --   gui = 'none'
     --   },
     buffer_visible = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "#ff0000" },
+      guibg = { attribute = "bg", highlight = "#ff0000" },
     },
 
     close_button = {
@@ -109,8 +115,8 @@ bufferline.setup {
       guibg = { attribute = "bg", highlight = "Normal" },
     },
     tab = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "#ff0000" },
+      guibg = { attribute = "bg", highlight = "#ff0000" },
     },
     tab_close = {
       -- guifg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
@@ -163,5 +169,5 @@ bufferline.setup {
       guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
       guibg = { attribute = "bg", highlight = "Normal" },
     },
-  },
+  }, ]]
 }

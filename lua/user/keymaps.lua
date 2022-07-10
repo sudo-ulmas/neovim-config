@@ -28,3 +28,5 @@ keymap('n', '<leader>e', ':NvimTreeToggle<CR>',opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>b", ":BufferLinePick<CR>", opts)
+keymap("n", "<leader>w", ":Bdelete!<CR>", opts)
