@@ -24,12 +24,13 @@ nvim_tree.setup {
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
-  update_to_buf_dir = {
+  hijack_directories = {
     enable = true,
     auto_open = true,
   },
   diagnostics = {
     enable = true,
+    show_on_dirs = true,
     icons = {
       hint = "",
       info = "",
@@ -39,8 +40,8 @@ nvim_tree.setup {
   },
   update_focused_file = {
     enable = true,
-    update_cwd = true,
-    ignore_list = {},
+    update_root = true,
+    ignore_list = {"txt"},
   },
   git = {
     enable = true,
@@ -58,26 +59,32 @@ nvim_tree.setup {
         { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
         { key = "h", cb = tree_cb "close_node" },
         { key = "v", cb = tree_cb "vsplit" },
+        { key = "<C-c>", cb = tree_cb "cd" },
       },
     },
     number = false,
     relativenumber = false,
   },
   actions = {
+	  change_dir = {
+	global = true,
+	  },
   open_file = {
   quit_on_open = false,
   },
   },
   renderer = {
-	highlight_git = true,
+  highlight_git = true,
+  highlight_opened_files = "icon",
   root_folder_modifier = ":t",
 	icons = {
+		git_placement = "after",
 	glyphs = {
   default = "",
   symlink = "",
   git = {
     unstaged = "",
-    staged = "S",
+    staged = "✓",
     unmerged = "",
     renamed = "➜",
     deleted = "",
@@ -85,6 +92,8 @@ nvim_tree.setup {
     ignored = "◌",
   },
   folder = {
+    arrow_closed = "",
+    arrow_open = "",
     default = "",
     open = "",
     empty = "",
