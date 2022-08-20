@@ -11,4 +11,5 @@ require "user.gitsigns"
 require "user.nvim-tree"
 require "user.bufferline"
 require "user.flutter_tools"
+require "user.autocmds"
 
