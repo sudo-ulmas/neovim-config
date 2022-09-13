@@ -80,7 +80,7 @@ use "nvim-telescope/telescope.nvim"
 
 --Treesitter
 use {
- "nvim-treesitter/nvim-treesitter",
+ "ulmas97/nvim-treesitter",
  run = ":TSUpdate",
 }
 
