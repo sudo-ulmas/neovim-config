@@ -10,7 +10,7 @@ sidescrolloff = 8,
 termguicolors = true,	          -- set terminal gui colors to apply to neovim also
 splitbelow = true,		  -- new vertical widnwo split will be below
 splitright = true,                -- new horizontal window split will be on the right
-relativenumber = false,            -- set relative numbered lines
+relativenumber = true,            -- set relative numbered lines
 }
 for k,v in pairs(options) do
 	vim.opt[k]=v

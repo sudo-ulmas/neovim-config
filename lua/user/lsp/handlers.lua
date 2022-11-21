@@ -91,7 +91,7 @@ if not status_ok then
 	return
 end
 
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)
