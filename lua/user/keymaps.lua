@@ -31,6 +31,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>b", ":BufferLinePick<CR>", opts)
 keymap("n", "<leader>w", ":Bdelete!<CR>", opts)
 keymap("n", "<leader>t", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>p", ":Telescope live_grep<CR>", opts)
 -- LSP keymaps
 keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
