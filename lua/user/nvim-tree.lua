@@ -1,5 +1,3 @@
--- following options are the default
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   return
@@ -13,20 +11,37 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
-  disable_netrw = true,
-  hijack_netrw = true,
-  open_on_setup = false,
-  ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
-    "alpha",
-  },
-  open_on_tab = false,
-  hijack_cursor = false,
-  update_cwd = true,
-  hijack_directories = {
+  update_focused_file = {
     enable = true,
-    auto_open = true,
+    update_cwd = true,
+  },
+  renderer = {
+    root_folder_modifier = ":t",
+    icons = {
+      glyphs = {
+        default = "",
+        symlink = "",
+        folder = {
+          arrow_open = "",
+          arrow_closed = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "U",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
+    },
   },
   diagnostics = {
     enable = true,
@@ -38,68 +53,16 @@ nvim_tree.setup {
       error = "",
     },
   },
-  update_focused_file = {
-    enable = true,
-    update_root = true,
-    ignore_list = {"txt"},
-  },
-  git = {
-    enable = true,
-    ignore = true,
-    timeout = 500,
-  },
   view = {
     width = 30,
-    hide_root_folder = false,
+    side = "left",
     mappings = {
-      custom_only = false,
       list = {
         { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
         { key = "h", cb = tree_cb "close_node" },
         { key = "v", cb = tree_cb "vsplit" },
-        { key = "<C-c>", cb = tree_cb "cd" },
+	{ key = "<C-c>", cb = tree_cb "cd" },
       },
     },
-    number = false,
-    relativenumber = false,
-  },
-  actions = {
-	  change_dir = {
-	global = true,
-	  },
-  open_file = {
-  quit_on_open = false,
-  },
-  },
-  renderer = {
-  highlight_git = true,
-  highlight_opened_files = "icon",
-  root_folder_modifier = ":t",
-	icons = {
-		git_placement = "after",
-	glyphs = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "✓",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    arrow_closed = "",
-    arrow_open = "",
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-
-	},
-	},
   },
 }

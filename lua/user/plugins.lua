@@ -63,8 +63,8 @@ use "saadparwaiz1/cmp_luasnip"
 use "hrsh7th/cmp-nvim-lsp"
 use "hrsh7th/cmp-nvim-lua"
 use "windwp/nvim-autopairs"
-use "kyazdani42/nvim-web-devicons"
-use "kyazdani42/nvim-tree.lua"
+use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
+  use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
 use "akinsho/bufferline.nvim"
 use "moll/vim-bbye"
 
@@ -82,8 +82,11 @@ use "nvim-telescope/telescope.nvim"
 
 --Treesitter
 use {
- "ulmas97/nvim-treesitter",
- run = ":TSUpdate",
+ "nvim-treesitter/nvim-treesitter",
+ run = function()
+	 local ts_update = require('nvim-treesitter.install').update({with_sync = true})
+	 ts_update()
+ end,
 }
 
 --Git
