@@ -1,5 +1,6 @@
 --local colorscheme = 'minimal'
-local colorscheme = 'gruvbox'
+-- local colorscheme = 'gruvbox'
+local colorscheme = 'tokyonight-night'
 
 --vim.g.minimal_transparent_background = true
 local status_ok, _ = pcall(vim.cmd, 'colorscheme '.. colorscheme)

@@ -120,6 +120,11 @@ _G.packer_plugins = {
     path = "/Users/ulmas/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/Users/ulmas/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
   ["flutter-tools.nvim"] = {
     loaded = true,
     path = "/Users/ulmas/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
@@ -134,11 +139,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ulmas/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/Users/ulmas/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -194,6 +194,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ulmas/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/ulmas/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-bbye"] = {
     loaded = true,

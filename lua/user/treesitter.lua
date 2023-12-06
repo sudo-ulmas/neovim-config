@@ -1,6 +1,6 @@
 local configs = require("nvim-treesitter.configs")
 configs.setup {
-  ensure_installed = {"lua","help", "dart", "yaml","json", "swift"},
+  ensure_installed = {"lua","help", "dart", "yaml","json", "swift", "latex"},
   sync_install = false,
   ignore_install = { "help" }, -- List of parsers to ignore installing
 	autopairs = {

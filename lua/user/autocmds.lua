@@ -4,6 +4,6 @@ local api = vim.api
 local autoFormat = api.nvim_create_augroup("AutoFormat", {clear = true})
 api.nvim_create_autocmd("BufWritePost", {
 	pattern = "*.dart",
-command = "silent! lua vim.lsp.buf.formatting()",
+command = "silent! lua vim.lsp.buf.format()",
 group = autoFormat,
 })

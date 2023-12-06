@@ -44,9 +44,10 @@ return packer.startup(function(use)
 use "wbthomason/packer.nvim" -- Have packer manage itself
 use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
 use "nvim-lua/plenary.nvim" -- Userful lua function used by lots of plugins
--- use "folke/tokyonight.nvim"
+use "stevearc/dressing.nvim" 
+use "folke/tokyonight.nvim"
 -- use "Yazeed1s/minimal.nvim"
-use { "ellisonleao/gruvbox.nvim" }
+-- use { "ellisonleao/gruvbox.nvim" }
 use {
     'numToStr/Comment.nvim',
     config = function()
@@ -64,7 +65,7 @@ use "hrsh7th/cmp-nvim-lsp"
 use "hrsh7th/cmp-nvim-lua"
 use "windwp/nvim-autopairs"
 use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
-  use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
+use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
 use "akinsho/bufferline.nvim"
 use "moll/vim-bbye"
 
