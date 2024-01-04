@@ -47,7 +47,7 @@ use "nvim-lua/plenary.nvim" -- Userful lua function used by lots of plugins
 use "stevearc/dressing.nvim" 
 use "folke/tokyonight.nvim"
 -- use "Yazeed1s/minimal.nvim"
--- use { "ellisonleao/gruvbox.nvim" }
+use { "ellisonleao/gruvbox.nvim" }
 use {
     'numToStr/Comment.nvim',
     config = function()
@@ -80,6 +80,7 @@ use "akinsho/flutter-tools.nvim"
 
 --Telescope
 use "nvim-telescope/telescope.nvim"
+
 
 --Treesitter
 use {
