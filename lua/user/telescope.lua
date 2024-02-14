@@ -10,8 +10,13 @@ telescope.setup {
 
     prompt_prefix = " ",
     selection_caret = " ",
-    path_display = { "smart" },
-
+    path_display = {
+      	"shorten",
+	shorten = {
+		len = 1,
+		exclude = {-1,-2,-3},
+	},
+    },
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,

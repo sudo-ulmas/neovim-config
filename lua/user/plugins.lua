@@ -46,6 +46,7 @@ use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neov
 use "nvim-lua/plenary.nvim" -- Userful lua function used by lots of plugins
 use "stevearc/dressing.nvim" 
 use "folke/tokyonight.nvim"
+use { "catppuccin/nvim", as = "catppuccin" }
 -- use "Yazeed1s/minimal.nvim"
 use { "ellisonleao/gruvbox.nvim" }
 use {
@@ -68,6 +69,7 @@ use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178
 use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
 use "akinsho/bufferline.nvim"
 use "moll/vim-bbye"
+use "nvim-lualine/lualine.nvim" 
 
 -- -cmpSnippets
 use "L3MON4D3/LuaSnip" -- snippet engine
@@ -77,6 +79,9 @@ use "rafamadriz/friendly-snippets"
 use "neovim/nvim-lspconfig" --enable LSP
 use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 use "akinsho/flutter-tools.nvim"
+use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+end}
 
 --Telescope
 use "nvim-telescope/telescope.nvim"
