@@ -1,11 +1,12 @@
 function _G.statusLine()
   return vim.g.flutter_tools_decorations.app_version
 end
+local cyberdream = require("lualine.themes.cyberdream")
 
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'cyberdream',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {

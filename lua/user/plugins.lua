@@ -47,8 +47,10 @@ use "nvim-lua/plenary.nvim" -- Userful lua function used by lots of plugins
 use "stevearc/dressing.nvim" 
 use "folke/tokyonight.nvim"
 use { "catppuccin/nvim", as = "catppuccin" }
--- use "Yazeed1s/minimal.nvim"
+use "Yazeed1s/minimal.nvim"
 use { "ellisonleao/gruvbox.nvim" }
+use { "rebelot/kanagawa.nvim" }
+use {"scottmckendry/cyberdream.nvim"}
 use {
     'numToStr/Comment.nvim',
     config = function()

@@ -51,6 +51,7 @@ vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 
 -- Telescope
 keymap("n","<leader>fc", ":Telescope flutter commands<CR>", opts)
+keymap("n","<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 keymap("n", "=", [[<cmd>vertical resize +5<cr>]], opts) -- make the window biger vertically
 keymap("n", "-", [[<cmd>vertical resize -5<cr>]], opts) -- make the window smaller vertically
