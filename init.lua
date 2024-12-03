@@ -1,4 +1,6 @@
 require "user.options"
+require "user.neotest"
+require "user.toggleterm"
 require "user.keymaps"
 require "user.plugins"
 require "user.colorscheme"
@@ -12,4 +14,4 @@ require "user.nvim-tree"
 require "user.bufferline"
 require "user.flutter_tools"
 require "user.autocmds"
-
+require "user.lualine"
