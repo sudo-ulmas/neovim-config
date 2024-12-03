@@ -16,5 +16,8 @@ root_patterns = { ".git", "pubspec.yaml" },
       virtual_text = true, -- show the highlight using virtual text
       virtual_text_str = "■", -- the virtual text character to highlight
     },
-  }
+  settings = {
+			lineLength = 120,
+		}
+	},
 }

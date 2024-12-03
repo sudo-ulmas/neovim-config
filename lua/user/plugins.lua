@@ -50,7 +50,9 @@ use { "catppuccin/nvim", as = "catppuccin" }
 use "Yazeed1s/minimal.nvim"
 use { "ellisonleao/gruvbox.nvim" }
 use { "rebelot/kanagawa.nvim" }
-use {"scottmckendry/cyberdream.nvim"}
+use {
+	"scottmckendry/cyberdream.nvim"
+}
 use {
     'numToStr/Comment.nvim',
     config = function()
@@ -78,7 +80,17 @@ use "L3MON4D3/LuaSnip" -- snippet engine
 use "rafamadriz/friendly-snippets"
 
 -- LSP
-use "neovim/nvim-lspconfig" --enable LSP
+use {
+	"neovim/nvim-lspconfig",
+ 	config = function()
+        -- Require the ruby_lsp setup
+        require('lspconfig').ruby_lsp.setup{
+            cmd = { "ruby-lsp" },
+            filetypes = { "ruby" },
+            init_options = { formatter = "auto" }
+        }
+    end
+} --enable LSP
 use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 use "akinsho/flutter-tools.nvim"
 use {"akinsho/toggleterm.nvim", tag = '*', config = function()
@@ -100,6 +112,16 @@ use {
 
 --Git
 use "lewis6991/gitsigns.nvim"
+use {
+  "nvim-neotest/neotest",
+  requires = {
+    "nvim-neotest/nvim-nio",
+    "nvim-lua/plenary.nvim",
+    "antoinemadec/FixCursorHold.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    'sidlatau/neotest-dart'
+  }
+}
 
 
 
